@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.toggle__container{
+    padding: 0.2rem;
+    width: 50px;
+    border-radius: 3rem;
+    background-color: hsl(223, 50%, 87%);
+}
+
+.toggle__button{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+}
