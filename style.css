@@ -4,13 +4,55 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: "Manrope";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
+header{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    border: solid black 1px;
+    font-size: .8rem;
+}
+
+aside{
+    display: flex;
+    align-items: center;
+}
+
+article{
+    align-self: stretch;
+    border-top: hsl(223, 50%, 87%) solid 1px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card__title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .9rem;
+}
 
 .toggle__container{
-    padding: 0.2rem;
+    padding: 0.3rem 0.2rem;
     width: 50px;
     border-radius: 3rem;
     background-color: hsl(223, 50%, 87%);
+    margin: 0 1rem;
 }
 
 .toggle__button{
@@ -19,3 +61,22 @@
     border-radius: 50%;
     background-color: hsl(0, 0%, 100%);
 }
+
+.card__link{
+    text-decoration: none;
+    padding: .8rem 3.5rem;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    border-radius: 2rem;
+    margin-top: 2.5rem;
+    display: inline-block;
+}
+
+.card__price{
+    display: flex;
+}
+
+.card__slider{
+    width: 90%;
+}
+

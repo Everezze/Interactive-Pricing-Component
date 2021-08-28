@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <title>Interactive pricing Component</title>
 </head>
@@ -16,31 +19,34 @@
             <p>No credit card required.</p>
         </header>
 
-        <section>
-            <h2>100k pageviews</h2>
-            <input type="range">
+        <section class="card">
+            <h2 class="card__title">100k pageviews</h2>
+            <input class="card__slider" type="range">
 
-            <div>
+            <div class="card__price">
                 <p>$16.00</p>
                 <p>/month</p>
             </div>
 
-            <div>
-                <p>monthly billing</p>
+            <aside>
+                <p>Monthly Billing</p>
                 <!-- here add the toggle button -->
                 <div class="toggle__container">
                     <div class="toggle__button"></div>
                 </div>
-                <p>yearly billing <span> -25% </span> </p>
-            </div>
 
-            <aside>
-                <p>unlimited websites</p>
-                <p>100% data ownership</p>
-                <p>email reports</p>
+                <p>Yearly Billing <span> -25% </span> </p>
             </aside>
 
-            <a href="#">start my trial</a>
+            <article>
+                <div>
+                    <p class="">Unlimited websites</p>
+                    <p class="">100% data ownership</p>
+                    <p class="">Email reports</p>
+                </div>
+    
+                <a class="card__link" href="#">Start my trial</a>
+            </article>
         </section>
 
     <script src="app.js"></script>
