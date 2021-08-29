@@ -1,3 +1,7 @@
+:root{
+    --text-color: hsl(225, 20%, 60%);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -30,17 +34,38 @@ section{
 }
 
 aside{
+    align-self: stretch;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     margin: 2.5rem 0;
+    color: var(--text-color);
 }
 
 article{
     align-self: stretch;
     border-top: hsl(223, 50%, 87%) solid 1px;
-    text-align: center;
+    /* text-align: center; */
     /* padding: 1rem; */
     padding-top: 1rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+.card__tophalf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    color: var(--text-color);
+}
+
+.card__bottomhalf{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card__title{
@@ -50,11 +75,11 @@ article{
 }
 
 .toggle__container{
-    padding: 0.3rem 0.2rem;
+    padding: 0.3rem;
     width: 50px;
     border-radius: 3rem;
     background-color: hsl(223, 50%, 87%);
-    margin: 0 1rem;
+    margin: 0 .8rem;
 }
 
 .toggle__button{
@@ -70,7 +95,7 @@ article{
     background-color: hsl(227, 35%, 25%);
     color: hsl(226, 100%, 87%);
     border-radius: 2rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: inline-block;
 }
 
@@ -81,18 +106,64 @@ article{
 
 .price__value{
     font-size: 2.5rem;
+    color: hsl(227, 35%, 25%);
 }
 
 .price__perMonth{
-    margin: 0 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
 }
 
 .card__slider{
-    width: 90%;
+    width: 100%;
     margin: 2.5rem 0;
 }
 
 .show__advantage{
-    margin: .7rem;
+    margin: .7rem 0;
 }
 
+.show__advantage::before{
+    content: url('./images/icon-check.svg');
+    margin-right: 1rem;
+}
+
+.card__discount{
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    display: inline-block;
+    padding: .1rem .6rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    margin: 0 .9rem 0 0.3rem ;
+}
+
+@media screen and (min-width:782px) {
+    
+    .card__tophalf{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .card__title{
+        order: -2;
+    }
+
+    .price{
+        order: -1;
+    }
+
+    .card__discount{
+        margin-right: 5rem;
+    }
+
+    .card__bottomhalf{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card__link{
+        margin: 0;
+    }
+}
