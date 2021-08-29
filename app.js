@@ -1,7 +1,13 @@
 const discount= document.getElementById('discount');
 
-if(document.body.offsetWidth >= 782){
-    discount.innerHTML = "-25% discount";
-}
-else{discount.innerHTML='-25%';}
+
+window.addEventListener('resize', function(){
+
+    if(window.innerWidth >= 782){
+        discount.innerHTML = "-25% discount";
+    }
+    else{discount.innerHTML='-25%';}
+
+})
+
 
