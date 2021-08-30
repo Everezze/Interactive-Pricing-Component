@@ -3,6 +3,8 @@ const toggleButton= document.getElementById('toggleButton');
 const toggleButtonInnerCircle=document.getElementById('toggleCircle');
 const toggleContainer= document.getElementById('toggleContainer');
 const yearlyBilling= document.getElementById('yearlyBilling');
+const slider= document.getElementById('sliderRange');
+const price= document.getElementById('price');
 
 
 window.addEventListener('resize', function(){
@@ -47,4 +49,29 @@ toggleButton.addEventListener('click', function(){
     else if(!toggleButton.classList.contains('active') && window.innerWidth >=782){
         yearlyBilling.style.marginRight='205px';
     }
+});
+
+slider.addEventListener('change', function(){
+    let step=slider.getAttribute('step');
+    console.log('zerzef');
+    if(parseFloat(slider.value)>=16 && slider.value<24){
+        step = 8;
+        console.log(`ici step fait ${step}`);
+        slider.setAttribute('step',step);
+    }
+    else if(parseFloat(slider.value)>=24 && slider.value<36){
+        step= 12;
+        console.log(`ici step fait ${step}`);
+        slider.setAttribute('step',step);
+    }   
+    else{
+        step=4;
+        console.log(`ici step fait ${step}`);
+        slider.setAttribute('step',step);
+    }
+
+    // switch(slider.value){
+    //     case >=16<24:
+    // }
+    price.innerHTML=slider.value;
 });
