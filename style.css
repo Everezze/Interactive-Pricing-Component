@@ -80,6 +80,11 @@ article{
     border-radius: 3rem;
     background-color: hsl(223, 50%, 87%);
     margin: 0 .8rem;
+    cursor: pointer;
+}
+
+.toggle__container.active{
+    background-color: hsl(174, 77%, 80%);
 }
 
 .toggle__button{
@@ -87,6 +92,7 @@ article{
     height: 15px;
     border-radius: 50%;
     background-color: hsl(0, 0%, 100%);
+    transition: margin-left 400ms ease-out;
 }
 
 .card__link{
@@ -117,6 +123,40 @@ article{
 .card__slider{
     width: 100%;
     margin: 2.5rem 0;
+    -webkit-appearance: none;
+}
+
+.card__slider::-webkit-slider-runnable-track{
+    background-color: hsl(224, 65%, 95%);
+    height: 10px;
+}
+
+.card__slider::-moz-range-track{
+    background-color: hsl(224, 65%, 95%);
+    height: 10px;
+    border-radius: 2rem;
+}
+
+.card__slider::-webkit-slider-thumb{
+    width: 50px;
+    height: 50px;
+    background: url('./images/icon-slider.svg') no-repeat center;
+    border-radius: 50%;
+}
+
+.card__slider::-moz-range-thumb{
+    width: 50px;
+    height: 50px;
+    background: url('./images/icon-slider.svg') no-repeat center;
+    border-radius: 50%;
+    background-color: hsl(174, 86%, 45%);
+    border:none;
+}
+
+.card__slider.card__slider::-moz-range-progress{
+    background-color: hsl(174, 77%, 80%);
+    height: 10px;
+    border-radius: 2rem;
 }
 
 .show__advantage{
@@ -155,7 +195,7 @@ article{
     }
 
     .card__discount{
-        margin-right: 5rem;
+        margin-right: 6.5rem;
     }
 
     .card__bottomhalf{
