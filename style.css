@@ -33,13 +33,14 @@ section{
     font-size: .8rem;
 }
 
-aside{
+.toggle{
     align-self: stretch;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin: 2.5rem 0;
     color: var(--text-color);
+    padding: 0 1rem;
 }
 
 article{
@@ -176,6 +177,7 @@ article{
     border-radius: 1rem;
     font-weight: 800;
     margin: 0 .9rem 0 0.3rem ;
+    display: none;
 }
 
 @media screen and (min-width:782px) {
@@ -205,5 +207,9 @@ article{
 
     .card__link{
         margin: 0;
+    }
+
+    #yearlyBilling{
+        margin-right: 205px;
     }
 }

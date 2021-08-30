@@ -1,6 +1,8 @@
 const discount= document.getElementById('discount');
 const toggleButton= document.getElementById('toggleButton');
 const toggleButtonInnerCircle=document.getElementById('toggleCircle');
+const toggleContainer= document.getElementById('toggleContainer');
+const yearlyBilling= document.getElementById('yearlyBilling');
 
 
 window.addEventListener('resize', function(){
@@ -28,6 +30,21 @@ toggleButton.addEventListener('click', function(){
     if(toggleButton.classList.contains('active')){
         console.log("entered condition")
         toggleButtonInnerCircle.style.marginLeft=`calc(100% - 15px)`;
+
+        discount.style.display='inline';
+        toggleContainer.style.padding='0';
     }
-    else{toggleButtonInnerCircle.style.marginLeft='0';}
+    else{
+        toggleButtonInnerCircle.style.marginLeft='0';
+        discount.style.display='none';
+        toggleContainer.style.padding='0 1rem';
+    }
+
+    if(toggleButton.classList.contains('active') && window.innerWidth >=782 || window.innerWidth<782){
+        console.log("aa");
+        yearlyBilling.style.marginRight="0";
+    }
+    else if(!toggleButton.classList.contains('active') && window.innerWidth >=782){
+        yearlyBilling.style.marginRight='205px';
+    }
 });
