@@ -15,10 +15,18 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-image: url(./images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(230, 100%, 99%);
+    background-size: 100% 52%;
 }
 
 header{
     text-align: center;
+    background: url(./images/pattern-circles.svg) no-repeat center;
+    padding: 3rem 0;
+    font-size: 1rem;
+    margin: 2rem 0 1rem;
 }
 
 section{
@@ -31,6 +39,7 @@ section{
     border-radius: 10px;
     border: solid black 1px;
     font-size: .8rem;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .toggle{
@@ -180,6 +189,18 @@ article{
     display: none;
 }
 
+.header__content{
+    font-size: .8em;
+    margin: .3rem 0;
+    color: var(--text-color);
+}
+
+.header__title{
+    font-size: 1.3em;
+    padding-bottom: .5rem;
+    color: hsl(227, 35%, 25%);
+}
+
 @media screen and (min-width:782px) {
     
     .card__tophalf{
@@ -211,5 +232,15 @@ article{
 
     #yearlyBilling{
         margin-right: 205px;
+    }
+
+    header{
+        font-size: 1.4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .header__content{
+        display: inline-block;
+        font-size: 0.7em;
     }
 }
