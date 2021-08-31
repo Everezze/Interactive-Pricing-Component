@@ -6,6 +6,7 @@ const yearlyBilling= document.getElementById('yearlyBilling');
 const slider= document.getElementById('sliderRange');
 const price= document.getElementById('price');
 const pageviews= document.getElementById('cardTitle');
+const subscriptionPeriod= document.getElementById('subscriptionPeriod');
 
 const prices= [8,12,16,24,36];
 
@@ -37,11 +38,13 @@ toggleButton.addEventListener('click', function(){
 
         discount.style.display='inline';
         toggleContainer.style.padding='0';
+        subscriptionPeriod.innerHTML="/ year"
     }
     else{
         toggleButtonInnerCircle.style.marginLeft='0';
         discount.style.display='none';
         toggleContainer.style.padding='0 1rem';
+        subscriptionPeriod.innerHTML="/ month"
     }
 
 
