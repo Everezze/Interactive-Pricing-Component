@@ -80,7 +80,7 @@ toggleButton.addEventListener('click', function(){
     }
 });
 
-slider.addEventListener('change', function(){
+slider.addEventListener('input', function(){
     // let step=slider.getAttribute('step');
     // console.log('zerzef');
     // if(parseFloat(slider.value)>=16 && slider.value<24){
@@ -136,4 +136,12 @@ slider.addEventListener('change', function(){
             break;
     }
 
+});
+
+slider.addEventListener('mousedown',function(){
+    slider.style.cursor='grabbing';
+});
+
+slider.addEventListener('mouseup', function(){
+    slider.style.cursor="pointer";
 });

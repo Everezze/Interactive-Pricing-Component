@@ -116,6 +116,10 @@ article{
     display: inline-block;
 }
 
+.card__link:hover{
+    color: hsl(0, 0%, 100%);
+}
+
 .price{
     display: flex;
     align-items: center;
@@ -150,6 +154,7 @@ article{
 }
 
 .card__slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
     width: 50px;
     height: 50px;
     background: url('./images/icon-slider.svg') no-repeat center;
@@ -163,12 +168,23 @@ article{
     border-radius: 50%;
     background-color: hsl(174, 86%, 45%);
     border:none;
+    box-shadow: 0px 15px 50px hsl(174, 86%, 55%);
 }
 
-.card__slider.card__slider::-moz-range-progress{
+.card__slider::-moz-range-progress{
     background-color: hsl(174, 77%, 80%);
     height: 10px;
     border-radius: 2rem;
+}
+
+.card__slider:hover::-moz-range-thumb{
+    background-color: hsl(174, 77%, 60%);
+    /* cursor: pointer; */
+}
+
+.card__slider:active::-moz-range-thumb{
+    /* cursor: grabbing; */
+    background-color: hsl(174, 86%, 35%);
 }
 
 .show__advantage{
